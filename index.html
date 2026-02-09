@@ -4,73 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="sources/i.png"">
+    <link rel="icon" href="sources/i.png">
     <title>s</title>
     <style>
-        body {
-            background-color: rgba(255, 192, 203, 0.603);
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        .w {
-            position: absolute;
-            top: 199px;
-            left: 500px;
-            width: 500px;
+        body {
+            background-color: rgba(255, 192, 203, 0.603);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
         }
 
         .title {
-            text-align: center;
             font-family: cursive;
-            font-size: 30px;
+            font-size: clamp(20px, 5vw, 30px);
+            margin-bottom: 20px;
+        }
+
+        .w {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .links-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
         }
 
         .p {
-            position: absolute;
-            top: 150px;
-            left: 350px;
-            width: 200px;
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            display: block;
         }
 
-        .t1 {
+        .links {
             position: absolute;
-            top: 240px;
-            left: 405px;
-            width: 200px;
-            z-index: 2;
-            font-size: 17px;
-            color: green;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
         }
 
-        .t2 {
-            position: absolute;
-            top: 257px;
-            left: 405px;
-            width: 200px;
-            z-index: 2;
-            font-size: 17px;
-            color: green;
-        }
-
+        .t1,
+        .t2,
         .t3 {
-            position: absolute;
-            top: 269px;
-            left: 405px;
-            width: 200px;
-            z-index: 2;
-            font-size: 17px;
+            font-size: clamp(15px, 3.5vw, 17px);
             color: green;
+            text-decoration: none;
+            cursor: pointer;
         }
 
-        .t1:hover {
-            color: navy;
-            text-decoration: underline;
-        }
-
-        .t2:hover {
-            color: navy;
-            text-decoration: underline;
-        }
-
+        .t1:hover,
+        .t2:hover,
         .t3:hover {
             color: navy;
             text-decoration: underline;
@@ -79,23 +86,17 @@
 </head>
 
 <body>
-    <div class=" wrapper">
-    <div class="title"></div>
-    <img class="w" src="sources/winrina.png">
-
-    <a href="letter.html">
-        <div class="t1">letter</div>
-    </a>
-
-    <a href="letter.html#v">
-        <div class="t3">v</div>
-    </a>
-
-    <img class="p" src="sources/p.png">
+    <div class="wrapper">
+        <div class="title"></div>
+        <div class="links-container">
+            <img class="p" src="sources/p.png">
+            <div class="links">
+                <a href="letter.html" class="t1">letter</a>
+                <a href="letter.html#v" class="t3">v</a>
+            </div>
+        </div>
+        <img class="w" src="sources/winrina.png">
     </div>
-    <script>
-        alert('try mo e desktop mode... hindi ko nagawang responsive T T. im sorry')
-    </script>
-    </body>
+</body>
 
 </html>

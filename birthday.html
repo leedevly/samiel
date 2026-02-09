@@ -2,63 +2,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>cake for my baby</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="sources/i.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             background-color: pink;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
         }
 
         .candle-count-display {
             text-align: center;
-            margin-top: 150px;
-            margin-bottom: 20px;
-            font-size: 20px;
-            padding: 10px;
+            margin-bottom: 60px;
+            font-size: clamp(16px, 4vw, 20px);
+            padding: 10px 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
             border: 2px solid rgb(238, 166, 178);
             font-family: cursive;
+            max-width: 90%;
+        }
+
+        .cake-container {
+            position: relative;
+            width: 100%;
+            max-width: 250px;
+            aspect-ratio: 1.25 / 1;
         }
 
         .cake {
-            position: absolute;
-            width: 250px;
-            height: 200px;
-            top: 50%;
-            left: 50%;
-            margin-top: -70px;
-            margin-left: -125px;
+            position: relative;
+            width: 100%;
+            height: 100%;
         }
 
         .plate {
-            width: 270px;
-            height: 110px;
+            width: 108%;
+            height: 55%;
             position: absolute;
-            bottom: -10px;
-            left: -10px;
+            bottom: -5%;
+            left: -4%;
             background-color: lightblue;
             border-radius: 50%;
             box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
         }
 
-        .cake>* {
-            position: absolute;
-        }
-
         .layer {
-            width: 250px;
-            height: 100px;
+            width: 100%;
+            height: 50%;
             border-radius: 50%;
             background-color: lightpink;
             box-shadow: 0 2px 0px #6a4b18, 0 4px 0px #0b332e, 0 6px 0px #32230b;
+            position: absolute;
         }
 
         .layer-top {
@@ -66,57 +74,61 @@
         }
 
         .layer-middle {
-            top: 33px;
+            top: 16.5%;
         }
 
         .layer-bottom {
-            top: 66px;
+            top: 33%;
         }
 
         .icing {
-            top: 2px;
-            left: 5px;
+            position: absolute;
+            top: 1%;
+            left: 2%;
             background-color: rgb(255, 207, 215);
-            width: 240px;
-            height: 90px;
+            width: 96%;
+            height: 45%;
             border-radius: 50%;
         }
 
         .drip {
-            width: 50px;
-            height: 60px;
             background-color: rgb(255, 207, 215);
             border-bottom-left-radius: 25px;
             border-bottom-right-radius: 25px;
+            position: absolute;
         }
 
         .drip1 {
-            top: 53px;
-            left: 5px;
-            height: 48px;
-            width: 40px;
+            width: 16%;
+            height: 24%;
+            top: 26.5%;
+            left: 2%;
         }
 
         .drip2 {
-            top: 69px;
-            left: 181px;
+            width: 20%;
+            height: 30%;
+            top: 34.5%;
+            left: 72.4%;
         }
 
         .drip3 {
-            top: 54px;
-            left: 90px;
-            width: 80px;
+            width: 32%;
+            height: 30%;
+            top: 27%;
+            left: 36%;
         }
 
         .candle {
             background-color: rgb(24, 82, 24);
-            width: 12px;
-            height: 70px;
+            width: 4.8%;
+            height: 35%;
             border-radius: 6px/3px;
-            top: -20px;
+            top: -10%;
             left: 50%;
             transform: translateX(-50%);
             z-index: 10;
+            position: absolute;
         }
 
         .candle.out .flame {
@@ -126,10 +138,10 @@
         .flame {
             position: absolute;
             background-color: orange;
-            width: 10px;
-            height: 25px;
+            width: 83.33%;
+            height: 35.71%;
             border-radius: 8px;
-            top: -34px;
+            top: -48.57%;
             left: 50%;
             transform: translateX(-50%);
             animation: flicker 1s infinite alternate;
@@ -152,28 +164,27 @@
         happy birthday, my samiel :3
     </div>
 
-    <div class="cake">
-        <div class="plate"></div>
-        <div class="layer layer-bottom"></div>
-        <div class="layer layer-middle"></div>
-        <div class="layer layer-top"></div>
-        <div class="icing"></div>
-        <div class="drip drip1"></div>
-        <div class="drip drip2"></div>
-        <div class="drip drip3"></div>
+    <div class="cake-container">
+        <div class="cake">
+            <div class="plate"></div>
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-middle"></div>
+            <div class="layer layer-top"></div>
+            <div class="icing"></div>
+            <div class="drip drip1"></div>
+            <div class="drip drip2"></div>
+            <div class="drip drip3"></div>
+        </div>
     </div>
 
     <script>
         alert('baby, sana nasa tahimik ikaw na lugar (?) rn... kasi sensitive yung pag blow T T make a wish then blow hehe. i love you!!!');
         document.addEventListener("DOMContentLoaded", function () {
             const cake = document.querySelector(".cake");
-
             const candle = document.createElement("div");
             candle.className = "candle";
-
             const flame = document.createElement("div");
             flame.className = "flame";
-
             candle.appendChild(flame);
             cake.appendChild(candle);
 
@@ -182,7 +193,6 @@
             function isBlowing() {
                 const dataArray = new Uint8Array(analyser.frequencyBinCount);
                 analyser.getByteFrequencyData(dataArray);
-
                 let sum = dataArray.reduce((a, b) => a + b, 0);
                 return sum / dataArray.length > 40;
             }
@@ -200,12 +210,10 @@
                     microphone = audioContext.createMediaStreamSource(stream);
                     microphone.connect(analyser);
                     analyser.fftSize = 256;
-
                     setInterval(blowOutCandle, 200);
                 })
                 .catch(err => console.log("Mic access denied:", err));
         });
-
     </script>
 </body>
 

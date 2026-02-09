@@ -7,120 +7,196 @@
     <link rel="icon" href="sources/i.png">
     <title>letter for samiel ୨୧</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             background-image: url(sources/greenbg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 20px;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .letter-section {
+            position: relative;
+            width: 100%;
+            margin-bottom: 40px;
         }
 
         .letter {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .ribbon {
+            width: clamp(80px, 20vw, 160px);
             position: absolute;
             top: 20px;
-            left: 27%;
+            right: 10%;
+        }
 
-            width: 650px;
-            height: 700px;
+        .clover {
+            width: clamp(80px, 20vw, 160px);
+            position: absolute;
+            top: 50%;
+            right: 5%;
         }
 
         .text {
             position: absolute;
-            top: 150px;
-            left: 35%;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 500px;
+            font-size: clamp(11px, 2.5vw, 16px);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .cake-section {
+            text-align: center;
+            margin: 60px 0;
         }
 
         .cake {
-            width: 250px;
-            position: absolute;
-            top: 150%;
-            left: 50px;
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
         .cake:hover {
             transform: scale(0.90) translateY(-5px);
         }
 
+        .textforcake {
+            font-family: cursive;
+            font-size: clamp(13px, 3vw, 15px);
+            margin-top: 10px;
+        }
+
+        .hr {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .hr img {
+            width: 100%;
+            max-width: 1400px;
+            height: auto;
+        }
+
         .footer {
-            height: 156vh;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .valentine-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .valentine-container img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .ask {
             position: absolute;
-            top: 130vh;
-            left: 34%;
-            font-size: 50px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: clamp(25px, 6vw, 50px);
             color: navy;
             font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            width: 90%;
         }
 
-        .ribbon {
-            width: 160px;
-            position: absolute;
-            top: 44px;
-            right: 60vh;
-        }
-
-        .clover {
-            width: 160px;
-            position: absolute;
-            top: 370px;
-            right: 80vh;
+        .ask span {
+            font-size: clamp(12px, 3vw, 15px);
+            color: rgb(4, 111, 9);
+            display: block;
+            margin-top: 10px;
         }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <img class="letter" src="sources/paper.png" alt="letter">
-        <img class="ribbon" src="sources/ribbon.png">
-        <img class="clover" src="sources/clover.png">
-        <div class="text">
-            My dearest Samiel,
-
-            happy birthday, ga :3.<br><br>
-            i hope you'll enjoy today, especially birthday mo.<br>
-            i'm so happy and grateful na i get to witness how you've grown, <br>
-            layk, through everything we've shared together too.<br><br>
-
-            being with you for more than a year has taught me so much talaga <br>
-            and i'm always grateful for it. thank you for everything tska the <br>
-            little moments that make me feel safe and happy. <br>i'm proud of you palagi.
-            kahit big,
-            small, or no achievements<br> i knew naman na you're doing your best<br>
-            palagi, and that’s more than enough na maging <br>
-            proud sa'yo. i love you, always, baby!
-            <br><br>
-            happy birthday again, my samiel.
-            <br><br>
-            Lovingly Yours,<br>
-            Lee
+        <div class="letter-section">
+            <img class="letter" src="sources/paper.png" alt="letter">
+            <img class="ribbon" src="sources/ribbon.png">
+            <img class="clover" src="sources/clover.png">
+            <div class="text">
+                My dearest Samiel,
+                <br><br>
+                happy birthday, ga :3.
+                <br><br>
+                i hope you'll enjoy today, especially birthday mo.
+                <br>
+                i'm so happy and grateful na i get to witness how you've grown,
+                <br>
+                layk, through everything we've shared together too.
+                <br><br>
+                being with you for more than a year has taught me so much talaga
+                <br>
+                and i'm always grateful for it. thank you for everything tska the
+                <br>
+                little moments that make me feel safe and happy.
+                <br>
+                i'm proud of you palagi. kahit big, small, or no achievements
+                <br>
+                i knew naman na you're doing your best
+                <br>
+                palagi, and that's more than enough na maging
+                <br>
+                proud sa'yo. i love you, always, baby!
+                <br><br>
+                happy birthday again, my samiel.
+                <br><br>
+                Lovingly Yours,<br>
+                Lee
+            </div>
         </div>
 
-        <a href="birthday.html"> <img class="cake" src="sources/c.png"></a>
-        <div class="textforcake" style="position:absolute;
-        top:180%;
-        left: 95px; font-family: cursive; font-size: 15px;">
-            click the cake, baby.
+        <div class="cake-section">
+            <a href="birthday.html">
+                <img class="cake" src="sources/c.png">
+            </a>
+            <div class="textforcake">click the cake, baby.</div>
         </div>
 
         <div class="hr">
-            <img style="width:1400px;
-            height: 200px;
-            position: absolute;
-            top:83%;
-            left: 6%;
-            " src="sources/catrainbow.gif">
+            <img src="sources/catrainbow.gif">
         </div>
 
-
-        <div style="height: 30vh;">
-        </div>
-        <div class="footer">
-            <img style=" position: absolute;
-            top: 83vh;
-            left: 19%; width: 1000px; height: 900px;" src="sources/ccc.png">
-            <div class="ask" id="v"> will you be my valentine?
-                <br>
-                <span style="font-size: 15px; color:rgb(4, 111, 9)">message me the answer. i love youu, baby!</span>
+        <div class="footer" id="v">
+            <div class="valentine-container">
+                <img src="sources/ccc.png">
+                <div class="ask">
+                    will you be my valentine?
+                    <span>message me the answer. i love youu, baby!</span>
+                </div>
             </div>
-
         </div>
     </div>
 </body>
